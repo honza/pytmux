@@ -10,7 +10,8 @@ Usage:
 
 Commands:
   list            Lists all configs.
-  run <config>... Runs the specified config.
+  run <config>... Runs the specified config.  The last config will end
+                  up on the screen.
   edit <config>   Edits the specified config, with --copy will make a new
                   config based on the one specified.
   doctor          Validates all of you configs.
