@@ -2,7 +2,7 @@
 
 Usage:
   pytmux list
-  pytmux run <config>
+  pytmux run <config>...
   pytmux edit <config> [--copy <other_config>]
   pytmux doctor
   pytmux -h | --help
@@ -10,7 +10,7 @@ Usage:
 
 Commands:
   list            Lists all configs.
-  run <config>    Runs the specified config.
+  run <config>... Runs the specified config.
   edit <config>   Edits the specified config, with --copy will make a new
                   config based on the one specified.
   doctor          Validates all of you configs.
@@ -38,7 +38,8 @@ def main():
     if arguments['list']:
         list_configs()
     elif arguments['run']:
-        run_config(arguments['<config>'])
+        for config in arguments['<config>']:
+            run_config(config)
     elif arguments['edit']:
         edit_config(arguments['<config>'], arguments['--copy'],
                     arguments['<other_config>'])
