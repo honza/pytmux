@@ -33,6 +33,9 @@ To start or switch to a session use::
 
   pytmux run
 
+You can provider a list of configs to run.  Pytmux will run then in turn and
+the last one will end up on the screen.
+
 doctor
 ~~~~~~
 
